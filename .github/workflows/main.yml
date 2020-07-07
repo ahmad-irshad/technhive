@@ -34,11 +34,11 @@ jobs:
          
          
     - name: installing build 
-      run: yarn build
+      run: npm run build
          
     - name: installing surge 
       run: npm install -g surge
       
     - name: deploying surge 
-      run: surge ./build ahmad_humza.surge.sh --token ${{ secrets.HUMZA_AHMAD }}
+      run: surge ./src/app.js ahmad_humza.surge.sh --token ${{ secrets.HUMZA_AHMAD }}
      
